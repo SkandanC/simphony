@@ -293,6 +293,9 @@ class TestSingleDetector:
 
             assert np.allclose(data[0][0], [self.result], rtol=0, atol=1e-8)
 
+    def dummy_test(self):
+        pass
+
     def test_conversion_gain(self, mzi):
         gc_input, gc_output = mzi
 
