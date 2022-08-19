@@ -180,9 +180,7 @@ def plot_outputs(out):
     plt.figure()
     for j in range(8):
         plt.subplot(8, 1, j + 1)
-        plt.plot(
-            simulator.freqs / 1e12, np.abs(out[:, j]) ** 2, label="Port {}".format(j)
-        )
+        plt.plot(simulator.freqs / 1e12, np.abs(out[:, j]) ** 2, label=f"Port {j}")
         plt.axvline(set_freq / 1e12)
         plt.legend()
         plt.xlabel("Frequency (THz)")
@@ -194,7 +192,7 @@ out = multi_input(8, inputs1550)
 plt.figure()
 for j in range(8):
     plt.subplot(8, 1, j + 1)
-    plt.plot(simulator.freqs / 1e12, np.abs(out[:, j]) ** 2, label="Port {}".format(j))
+    plt.plot(simulator.freqs / 1e12, np.abs(out[:, j]) ** 2, label=f"Port {j}")
     plt.axvline(set_freq / 1e12)
     plt.legend()
     plt.xlabel("Frequency (THz)")
