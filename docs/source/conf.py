@@ -95,7 +95,7 @@ version = re.sub(r"(\d+\.\d+)\.\d+(.*)", r"\1\2", simphony.__version__)
 version = re.sub(r"(\.dev\d+).*?$", r"\1", version)
 # The full version, including alpha/beta/rc tags.
 release = simphony.__version__
-print("%s %s" % (version, release))
+print(f"{version} {release}")
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -187,7 +187,7 @@ html_theme_options = {
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "%s v%s Manual" % (project, version)
+html_title = f"{project} v{version} Manual"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 # html_short_title = None
